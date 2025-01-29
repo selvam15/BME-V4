@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900');
+
+body {
+  background: #e7e7e7;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  font-size: 1.4rem;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.card {
+  background: #e8e3df;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(151, 150, 146, 0.4);
+  height: 45vw;
+  max-height: 450px;
+  max-width: 320px;
+  min-height: 225px;
+  min-width: 160px;
+  position: absolute;
+  transition: all ease-in 0.3s;
+  width: 32vw;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+.card-card1 {
+  box-shadow: 0 1px 2px rgba(151, 150, 146, 0.4), 0 4px 12px rgba(151, 150, 146, 0.4);
+  color: #635f5c;
+}
+
+.card-card2 {
+  color: #a68385;
+}
+
+.card-card2 .card__value {
+  transform: translateX(-2px);
+}
+
+.card-card2 .card__suit {
+  margin-top: 0.8rem;
+}
+
+.card-card3 {
+  color: #635f5c;
+}
+
+.card-card3 .card__suit {
+  margin-top: 0.8rem;
+}
+
+.card-card4 {
+  color: #a68385;
+}
+
+.card-card4 .card__suit {
+  margin-top: 0.7rem;
+}
+
+.card__face {
+  padding: 1.8rem 1.6rem;
+  position: absolute;
+}
+
+.card__value {
+  display: block;
+  text-align: center;
+  width: 22px;
+}
+
+.card__suit {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.perspective {
+  height: 100vh;
+  perspective: 1000px;
+  position: absolute;
+  width: 100vw;
+  margin-left: 190px;
+}
+
+.card-container {
+  cursor: pointer;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: rotateX(35deg) translate3d(-50%, -50%, 0);
+  height: 45vw;
+  width: 32vw;
+  max-height: 450px;
+  max-width: 320px;
+  
+}
+
+.card-card1 {
+  transform: rotate(-31deg) translate3d(-50%, -10%, 0);
+}
+
+.card-card2 {
+  transform: rotate(-31deg) translate3d(-49.5%, -10.5%, 0);
+}
+
+.card-card3 {
+  transform: rotate(-31deg) translate3d(-49%, -11%, 0);
+}
+
+.card-card4 {
+  transform: rotate(-31deg) translate3d(-48.5%, -11.5%, 0);
+}
+
+.card-container.spread .card-card1 {
+  transform: rotate(-31deg) translate3d(-50%, -10%, 0);
+  box-shadow: 0 1px 2px rgba(151, 150, 146, 0.4), 0 4px 12px rgba(151, 150, 146, 0.4);
+}
+
+.card-container.spread .card-card2 {
+  transform: rotate(-4.5deg) translateX(-22%);
+  box-shadow: 0 1px 2px rgba(151, 150, 146, 0.4), 0 2px 6px rgba(151, 150, 146, 0.4);
+}
+
+.card-container.spread .card-card3 {
+  transform: rotate(5.8deg) translateX(10%);
+  box-shadow: 0 1px 2px rgba(151, 150, 146, 0.4), 0 2px 4px rgba(151, 150, 146, 0.4);
+}
+
+.card-container.spread .card-card4 {
+  transform: rotate(22.5deg) translate3d(40%, -5%, 0);
+  box-shadow: 0 1px 2px rgba(151, 150, 146, 0.4), 0 2px 4px rgba(151, 150, 146, 0.4);
+}
+
+@keyframes card1 {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="about section" id="about">
+        <div class="about__container container grid">
+            <div class="about__data">
+                <h2 class="section__title about__title">More Information <br> About CIT</h2>
+                <p class="about__description">Chennai Institute of technology, the best engineering college in Chennai was established with the objective of providing quality technical education with adequate industrial exposure than any other engineering colleges in Chennai, caters the needs of the youth with its innovative teaching methods.
+                </p>
+                <a href="#" class="button">Website</a>
+            </div>
+            <div class="perspective">
+                <div class="card-container">
+    
+                    <div class="card card-card1">
+                        <img src="post.jpg!bw700" alt="" >
+                    </div>
+                    <div class="card card-card2">
+                        <img src="post.jpg!bw700" alt="">
+                    </div>
+                    <div class="card card-card3">
+                        <img src="post.jpg!bw700" alt="">
+                    </div>
+                    <div class="card card-card4">
+                       <img src="post.jpg!bw700" alt="" >
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        
+        $(document).ready(function() {
+    $('.card-container').click(function() {
+      $(this).toggleClass("spread");
+    });
+});
+    </script>
+</body>
+</html>

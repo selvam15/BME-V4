@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas {
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="dna-canvas"></canvas>
+    <script>
+        (function() {
+            var width, height, canvas, ctx, points = [], hue = 0;
+            var animateDNA = false;
+            
+            // Initialize the canvas
+            initCanvas();
+            addListeners();
+
+            function initCanvas() {
+                canvas = document.getElementById('dna-canvas');
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+                ctx = canvas.getContext('2d');
+                createDNAHelix();
+            }
+
+            function createDNAHelix() {
+                points = [];
+                let centerX = width / 2;
+                let centerY = height / 2;
+
+                for (let i = 0; i < 50; i++) {
+                    let angle = i * 0.3;
+                    let offsetX = Math.sin(angle) * 100;
+                    let offsetY = (i - 25) * 15;
+                    let leftX = centerX - offsetX;
+                    let rightX = centerX + offsetX;
+                    let py = centerY + offsetY;
+
+                    points.push({ x: leftX, y: py, angle });
+                    points.push({ x: rightX, y: py, angle });
+                }
+            }
+
+            function drawDNA() {
+                ctx.clearRect(0, 0, width, height);
+                hue = (hue + 1) % 360;
+                let color = `hsl(${hue}, 100%, 60%)`;
+
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 2;
+
+                for (let i = 0; i < points.length - 2; i += 2) {
+                    ctx.beginPath();
+                    ctx.moveTo(points[i].x, points[i].y);
+                    ctx.lineTo(points[i + 1].x, points[i + 1].y);
+                    ctx.stroke();
+
+                    if (i < points.length - 2) {
+                        ctx.beginPath();
+                        ctx.moveTo(points[i].x, points[i].y);
+                        ctx.lineTo(points[i + 2].x, points[i + 2].y);
+                        ctx.stroke();
+
+                        ctx.beginPath();
+                        ctx.moveTo(points[i + 1].x, points[i + 1].y);
+                        ctx.lineTo(points[i + 3].x, points[i + 3].y);
+                        ctx.stroke();
+                    }
+                }
+
+                for (let i = 0; i < points.length; i++) {
+                    ctx.beginPath();
+                    ctx.arc(points[i].x, points[i].y, 5, 0, 2 * Math.PI);
+                    ctx.fillStyle = `hsl(${(hue + 180) % 360}, 100%, 50%)`;
+                    ctx.fill();
+                }
+
+                animateDNAHelix();
+                if (animateDNA) {
+                    requestAnimationFrame(drawDNA);
+                }
+            }
+
+            function animateDNAHelix() {
+                for (let i = 0; i < points.length; i++) {
+                    points[i].x = width / 2 + (i % 2 === 0 ? -1 : 1) * Math.sin(points[i].angle + hue / 50) * 100;
+                    points[i].y += Math.cos(points[i].angle + hue / 100) * 1;
+                }
+            }
+
+            function addListeners() {
+                canvas.addEventListener('mouseenter', function() {
+                    animateDNA = true;
+                    canvas.style.display = 'block';
+                    drawDNA();
+                });
+
+                canvas.addEventListener('mouseleave', function() {
+                    animateDNA = false;
+                    canvas.style.display = 'none';
+                });
+
+                window.addEventListener('resize', function() {
+                    initCanvas();
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
