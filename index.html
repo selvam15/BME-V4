@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="BIOMUTANTZ.png" type="image/png">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="swiper-bundle.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://www.1001fonts.com/speedbackdemo-font.html?text=Biomutantz" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Speedbackdemo&display=swap" rel="stylesheet">
+
+        <title>Biomutantz</title>
+        <style>
+            #demo-canvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="preloader">
+            
+        </div>
+        <header class="header" id="header"> 
+            <nav class="nav container">
+                <a href="#" class="nav__logo"><img src="badge.png" style="width: 200px;height:100px;margin:top 3px" class="badge"></a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#event" class="nav__link">Events</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#team" class="nav__link">Team</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                    <!--dark mode start
+                    <div class="nav__dark">
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+                    -->
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--HOME-->
+<!--            <section class="home" id="home">
+                <canvas id="demo-canvas"></canvas>
+                <div id="app"></div>
+                
+                    <div class="home__container container grid">
+                        <div class="hero-section">
+                        <div class="home__data">
+                        <span class="home__data-subtitle">National level Technical symposium</span>
+                        <h1 class="home__data-title" style="font-family: Cinzel, serif;"><b>BIOMUTANTZ</b></h1>
+
+                        <a href="#about" class="button" id="hb">Explore</a>
+                        </div>
+                        <div class="home__social">
+                        <a href="https://youtube.com/@biomutantzcit3922?feature=shared" target="_blank" class="home__social-link"><i class='bx bxl-youtube'></i></a>
+                        <a href="https://www.instagram.com/biomutantzcit?igsh=cWNtbmE5N3l2MGJs" target="_blank" class="home__social-link"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="https://www.linkedin.com/company/biomutantzcit/" target="_blank" class="home__social-link"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="mailto:biomutanz@citchennai.net?subject=Subject" target="_blank" class="home__social-link"><i class='bx bxl-gmail'></i></a>
+                    </div>
+                
+                        <div class="main-image">
+                            <img src="BIOMUTANTZ.png" alt="" class="Main Image">
+                        </div>
+                    <div>
+                            <img src="BIOMUTANTZ.png" class="logos">
+                    </div>
+                </div>
+              </section>-->
+            
+              <div class="hero-section">
+                <canvas id="demo-canvas"></canvas>
+                <div class="main-content">
+                    <div class="content">
+                        <h3 class="HIM">National level Technical symposium</h3><br>
+                        <h1 class="XFH" style="font-family: Cinzel, serif;"><b>BIOMUTANTZ</b></h1>
+                        <br>
+                    </div>
+                     <a href="#about" class="button" id="hb">Explore</a> 
+                    <br><br><br>
+                    <div class="home__social">
+                        <a href="https://youtube.com/@biomutantzcit3922?feature=shared" target="_blank" class="home__social-link"><i class='bx bxl-youtube'></i></a>
+                        <a href="https://www.instagram.com/biomutantzcit?igsh=cWNtbmE5N3l2MGJs" target="_blank" class="home__social-link"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="https://www.linkedin.com/company/biomutantzcit/" target="_blank" class="home__social-link"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="mailto:biomutanz@citchennai.net?subject=Subject" target="_blank" class="home__social-link"><i class='bx bxl-gmail'></i></a>
+                    </div>
+                </div>
+                <div class="main-image">
+                    <img src="BIOMUTANTZ.png" alt="Main Image">
+                </div>
+            </div>
+
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title_about__title" style="text-shadow: none; color:rgb(184, 184, 184);">More Information <br> About CIT</h2>
+                        <p class="about__description">
+                            Chennai Institute of Technology, recognized as the top engineering college in Chennai, was founded to deliver superior technical education accompanied by significant industrial exposure, caters the needs of the youth with its innovative teaching methods.
+                        </p>
+                        <a href="https://www.citchennai.edu.in/" class="button" style="background-color: rgb(226, 213, 215); color:rgb(255, 255, 255);text-shadow: none;">Website</a>
+                    </div>
+
+                    <div class="perspective">
+                        <div class="wrapper">
+                            <div class="box image-box">
+                                <img src="cit.jpg" alt="Conic gradient" class="img" style="height: 18re;align-items: center; ">
+                            </div>
+                             
+                        </div>
+                    </div>
+
+            </section>
+
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title_about__title" style="text-shadow: none; color:rgb(170, 170, 170);" >More Information <br> About Biomedical Department</h2>
+                        <p class="about__description">
+                            The Department of Biomedical Engineering offers B.E. (Biomedical) since 2019. The department has experienced and qualified faculty members, well equipped laboratories such as Biomedical Instrumentation lab, Diagnostic and Therapeutic Lab, Pathology and Microbiology Lab, Biochemistry lab, Human Physiology lab and Circuits lab with the availability of latest and updated version of software packages. The department has also promoted Center of excellence namely Center for Biomedical Research
+                        </p>
+                        <a href="https://www.citchennai.edu.in/departments/ug-courses/biomedical-engineering/" class="button" style="background-color: rgb(226, 213, 215); color:rgb(255, 255, 255);text-shadow: none;">Website</a>
+                    </div>
+
+                    <div class="perspective">
+                        <div class="wrapper">
+                            <div class="box image-box">
+                                <img src="biomedical.jpeg" alt="Conic gradient" class="img" style="height: 18re;align-items: center; ">
+                            </div>
+                        
+                        </div>
+                    </div>
+
+            </section>
+
+
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title_about__title" style="text-shadow: none; color:rgb(170, 170, 170);" >More Information <br> About Biomutantz</h2>
+                        <p class="about__description">
+                            The BIOMUTANTZ symposium represents a diverse blend of campus cultures, each with its unique language and customs, offering a curated series of both technical and non-technical events. Join us to have your skills evaluated and acknowledged, as we collaborate to bring about a significant transformation among the youth.
+                        </p>
+                    </div>
+
+                    <div class="perspective">
+                        <div class="wrapper">
+                            <div class="box image-box">
+                                <img src="2nd.jpeg" alt="Conic gradient" class="img" style="height: 18re;align-items: center; ">
+                            </div>
+                        
+                        </div>
+                    </div>
+
+            </section>
+            <br><br>
+            <br><br>
+            <section class="event" id="event">
+                <div class="title-text-center">
+                    <h3 style="font-weight: bolder;color:rgb(255, 255, 255);">Events In</h3>
+                    <h3 style="font-weight: bolder;color:rgb(255, 255, 255);">Our Symposium</h3>
+                    <h4><a href="events.html" style="color: white;">Explore</a></h4>
+                </div>  
+                <div class="card-wrapper">
+                    <div class="cont TECH" style="background-image: url(techevents.jpg);">
+                    <div class="overlay">
+                        <div class="items"></div>
+                        <div class="items head">
+                            <p style="font-weight: bolder;">Technical Events</p>
+                            <hr style="margin-top: -25px;">
+                        </div>
+                        <div class="items price">
+                            <p class="old"></p>
+                            <p class="new"></p>
+                        </div>
+                        <div class="items cart">
+                            <span><a href="events.html">GO    <i class='bx bxs-right-arrow-square bx-fade-left bx-flip-vertical' ></i></a></span>
+                        </div>
+                    </div>
+                    </div>
+                
+                    <div class="cont NONTECH" style="background-image: url(nontech.jpg);">
+                    <div class="overlay">
+                        <div class="items"></div>
+                        <div class="items head">
+                            <p style="font-weight: bolder;">Non-Tech Events</p>
+                            <hr>
+                        </div>
+                        <div class="items price">
+                            <p class="old"></p>
+                            <p class="new"></p>
+                        </div>
+                        <div class="items cart">
+                            <span><a href="#">GO      <i class='bx bxs-right-arrow-square bx-fade-left bx-flip-vertical' ></i></a></span>
+                        </div>
+                    </div>
+                    </div>
+                
+                    <div class="cont WORK" style="background-image: url(workshop.jpg);">
+                        <div class="overlay">
+                        <div class="items"></div>
+                        <div class="items head">
+                            <p style="font-weight: bolder;">Workshop</p>
+                            <hr>
+                        </div>
+                        <div class="items price">
+                            <p class="old"></p>
+                            <p class="new"></p>
+                        </div>
+                        <div class="items cart">
+                        <span><a href="#">GO       <i class='bx bxs-right-arrow-square bx-fade-left bx-flip-vertical' ></i></a></span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team-one" id="team" style="background-color: transparent;">
+                <div class="container">
+                    <div class="title text-center" >
+                        <p style="color: rgb(255, 255, 255);text-shadow:none;"></p>
+                        <h3 style="color:rgb(255, 255, 255);text-shadow:none;">Meet Our <br> Staff Coordinator</h3>
+                    </div>  
+                    <div class="row" >
+                        <div class="col-lg-3 col-md-6 col-sm-12" >
+                            <div class="single" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.363);">
+                                <div class="circle"></div>
+                                <div class="inner">
+                                    <h3 style="color: white;">Uma</h3>
+                                    <p style="color: white;">Assistant Professor</p>
+                                    <div class="image">
+                                        <img src="uma.png" alt="Uma">
+                                    </div>
+                                    <div class="social">
+                                        <a href="linkedin.com/in/uma-haimavathi-33b79b7a"><i class='bx bxl-linkedin' style="background-color: white;"></i></a>
+                                        <a href="mailto:umahaimavathik@citchennai.net?subject=Subject"><i class='bx bxl-gmail'></i></a>
+                                        <a href="teL:9500626231"><i class='bx bxs-phone-call'></i></a>
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                    
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="single" id="s1" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.363);">
+                                <div class="circle"></div> 
+                                <div class="inner">
+                                    <h3 style="color: white;">Saran Raj</h3>
+                                    <p style="color: white;">Assistant Professor</p>
+                                    <div class="image">
+                                        <img src="saran.png" alt="SaranRaj">
+                                    </div>
+                                    <div class="social">
+                                        <a href="https://www.linkedin.com/in/saran-raj-3342a221a?trk=contact-info"><i class='bx bxl-linkedin'></i></a>
+                                        <a href="mailto:saranrajn@citchennai.net?subject=Subject"><i class='bx bxl-gmail'></i></a>
+                                        <a href="teL:9789484884"><i class='bx bxs-phone-call'></i></a>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </section>
+
+
+            <section class="team-one" id="team">
+                <div class="container">
+                    <div class="title-text-center">
+                        <!-- <h4><a href="slide.html" style="color:white">Explore</a></h4> -->
+                    </div>
+                    <div class="title text-center">
+                        <p style="color:rgb(255, 255, 255);text-shadow:none;"></p>
+                        <h3 style="color:rgb(255, 255, 255);text-shadow:none;">Meet Our <br>Symposium Team</h3>
+                    </div>
+                    <div class="row" id="rows">
+                        
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="single" id="s1">
+                                <div class="circle"></div> 
+                                <div class="inner">
+                                    <h3 style="color:rgb(255, 255, 255);">Magesh M</h3>
+                                    <p>President</p>
+                                    <div class="image">
+                                        <img src="mag.png" alt="Magesh">
+                                    </div>
+                                    <div class="social">
+                                        <a href="https://www.linkedin.com/in/mageswaranm/"><i class='bx bxl-linkedin'></i></a>
+                                        <a href="mailto:mageswaranmuruganantham.bme2021@citchennai.net?subject=Subject"><i class='bx bxl-gmail'></i></a>
+                                        <a href="teL:9952260910"><i class='bx bxs-phone-call'></i></a>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="single" id="s1">
+                                <div class="circle"></div> 
+                                <div class="inner">
+                                    <h3 style="color:rgb(255, 255, 255);">Madhu sri k</h3>
+                                    <p>Vice President</p>
+                                    <div class="image">
+                                        <img src="mad.png" alt="Madhu sri">
+                                    </div>
+                                    <div class="social">
+                                        <a href="linkedin.com/in/madhu-sri-k-b6aa02256"><i class='bx bxl-linkedin'></i></a>
+                                        <a href="mailto:madhusrik.bme2022@citchennai.net?subject=Subject"><i class='bx bxl-gmail'></i></a>
+                                        <a href="teL:7010251985"><i class='bx bxs-phone-call'></i></a>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="single">
+                                <div class="circle"></div>
+                                <div class="inner">
+                                    <h3 style="color: white;">Rajalakshmi V</h3>
+                                    <p>Secretary</p>
+                                    <div class="image">
+                                        <img src="rajl.png" alt="Rajalakshmi">
+                                    </div>
+                                    <div class="social">
+                                        <a href="https://www.linkedin.com/in/rajalakshmi-v-bme-855765290"><i class='bx bxl-linkedin'></i></a>
+                                        <a href="mailto:rajalakshmiv.bme2023@citchennai.net?subject=Subject"><i class='bx bxl-gmail'></i></a>
+                                        <a href="teL:9092708285"><i class='bx bxs-phone-call'></i></a>
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+            </section>
+            
+            <br><br>
+            <br><br>
+
+            
+            <section class="video section" style="background-color:transparent;" >
+                <h2 class="section_title" style="font-size: 30px;    color: white;">Relive Biomutantz 2024</h2>
+                <div class="video__container container">
+                    <p class="video__description"> From echoes of 2024 to the symphony of 2025. </p>
+                    <div class="tv">
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="sympo.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+                        <section class="subscribe section">
+                            <canvas id="canvas"></canvas>
+                            <div class="subscribe__bg">
+                                <div class="subscribe__container container" style="background-color: rgba(0, 0, 0, 0.795);" id="subc">
+                                    <h2 class="section__title subscribe__title">Contact Our Team</h2>
+                                    <p class="subscribe__description">
+                                        Get your doubts clarified by contacting our team
+                                    </p>
+                
+                                    <form action="https://formspree.io/f/xwpvojkz" class="subscribe__form">
+                                        <input type="text" Contactholder="Enter email" class="subscribe__input" placeholder="Enter Email Id" required>
+                
+                                        <button class="button">
+                                            <a href="contact.html">Contact</a>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--==================== SPONSORS ====================-->
+<!-- SPONSOR SECTION -->
+<section class="sponsorships section" id="contact">
+    <div class="sponsorships__container">
+      <div class="sponsorships__track">
+        <div class="sponsor">
+          <img src="lee.png" alt="" class="sponsor__img">
+        </div>
+        <div class="sponsor">
+          <img src="biovs.png" alt="" class="sponsor__img">
+        </div>
+        <div class="sponsor">
+          <img src="kav.png" alt="" class="sponsor__img">
+        </div>
+        <div class="sponsor">
+          <img src="redh.png" alt="" class="sponsor__img">
+        </div>
+        <div class="sponsor">
+            <img src="lee.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="biovs.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="kav.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="redh.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="lee.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="biovs.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="kav.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="redh.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="lee.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="biovs.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="kav.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="redh.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="lee.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="biovs.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="kav.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="redh.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="lee.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="biovs.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="kav.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="redh.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="lee.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="biovs.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="kav.png" alt="" class="sponsor__img">
+          </div>
+          <div class="sponsor">
+            <img src="redh.png" alt="" class="sponsor__img">
+          </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br>
+  
+                    </main>
+
+                    <!--==================== FOOTER ====================-->
+                    <footer class="footer_section">
+                        <div class="footer__container container grid">
+                            <div class="footer__content grid" id="fot">
+                                <div class="footer__data">
+                                    <h3 class="footer__title">BIOMUTANTZ</h3>
+                                    <p class="footer__description">
+                                        Pulse of robotics meets the heartbeat of care
+                                    </p>
+                                    <div>
+                                        <a href="mailto:biomutanz@citchennai.net?subject=Subject" target="_blank" class="footer__social">
+                                            <i class='bx bxl-gmail'></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/company/biomutantzcit/" target="_blank" class="footer__social">
+                                            <i class='bx bxl-linkedin-square'></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/biomutantzcit?igsh=cWNtbmE5N3l2MGJs" target="_blank" class="footer__social">
+                                            <i class="ri-instagram-fill"></i>
+                                        </a>
+                                        <a href="https://youtube.com/@biomutantzcit3922?feature=shared" target="_blank" class="footer__social">
+                                            <i class="ri-youtube-fill"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                
+                                <div class="footer__data">
+                                    <h3 class="footer__subtitle">About</h3>
+                                    <ul>
+                                        <li class="footer__item">
+                                            <a href="#about" class="footer__link">About Us</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a href="#about" class="footer__link">About Cit</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a href="#video" class="footer__link">New & Blog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                
+                                <div class="footer__data">
+                                    <h3 class="footer__subtitle">Symposium</h3>
+                                    <ul>
+                                        <li class="footer__item">
+                                            <a href="slide.html" class="footer__link">Team</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a href="#team" class="footer__link">Staff's</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a href="" class="footer__link">member</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                
+                                <div class="footer__data">
+                                    <h3 class="footer__subtitle">Support</h3>
+                                    <ul>
+                                        <li class="footer__item">
+                                            <a href="mailto:umahaimavathik@citchennai.net?subject=Subject" class="footer__link">Staff Coordinator</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a href="mailto:mageswaranmuruganantham.bme2021@citchennai.net?subject=Subject" class="footer__link">President</a>
+                                        </li>
+                                        <li class="footer__item">
+                                            <a href="mailto:madhusrik.bme2022@citchennai.net?subject=Subject" class="footer__link">Vice President</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+            
+                            <div class="footer__rights">
+                                <p class="footer__copy">&#169; 2025 BIOMUTANTZ. All rigths reserved.</p>
+                                <div class="footer__terms">
+                                    <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+        </main>
+
+
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script>
+            (function() {
+                var width, height, canvas, ctx, points, target, animateHeader = true;
+            
+                // Initialize canvas and animation
+                initHeader();
+                initAnimation();
+                addListeners();
+            
+                function initHeader() {
+                    width = window.innerWidth;
+                    height = window.innerHeight; 
+                    target = { x: width / 2, y: height / 2 };
+            
+                    canvas = document.getElementById('demo-canvas');
+                    canvas.width = width;
+                    canvas.height = height;
+                    ctx = canvas.getContext('2d');
+            
+                    // Create points with a wider grid spacing
+                    points = [];
+                    for (var x = 0; x < width; x += width / 15) {  // Wider grid spacing
+                        for (var y = 0; y < height; y += height / 15) {
+                            var px = x + Math.random() * width / 15;
+                            var py = y + Math.random() * height / 15;
+                            var p = { x: px, originX: px, y: py, originY: py };
+                            points.push(p);
+                        }
+                    }
+            
+                    // Assign closest points
+                    for (var i = 0; i < points.length; i++) {
+                        var closest = [];
+                        var p1 = points[i];
+                        for (var j = 0; j < points.length; j++) {
+                            var p2 = points[j];
+                            if (p1 !== p2) closest.push(p2);
+                        }
+                        closest.sort((a, b) => getDistance(p1, a) - getDistance(p1, b));
+                        p1.closest = closest.slice(0, 5);  // Keeping 5 closest points for connection
+                    }
+            
+                    // Create circles for each point
+                    for (var i in points) {
+                        var c = new Circle(points[i], 2 + Math.random() * 2.5, 'rgba(255,255,255,0.3)');
+                        points[i].circle = c;
+                    }
+                }
+            
+                function addListeners() {
+                    if (!('ontouchstart' in window)) {
+                        window.addEventListener('mousemove', throttle(mouseMove, 20));
+                    }
+                    window.addEventListener('resize', resize);
+                }
+            
+                function mouseMove(e) {
+                    target.x = e.clientX || e.pageX;
+                    target.y = e.clientY || e.pageY;
+                }
+            
+                function resize() {
+                    width = window.innerWidth;
+                    height = window.innerHeight;
+                    canvas.width = width;
+                    canvas.height = height;
+                    initHeader();
+                }
+            
+                function initAnimation() {
+                    animate();
+                    for (var i in points) {
+                        shiftPoint(points[i]);
+                    }
+                }
+            
+                function animate() {
+                    ctx.clearRect(0, 0, width, height);
+                    for (var i in points) {
+                        var dist = getDistance(target, points[i]);
+                        if (dist < 10000) {  // Increased range for hover effect
+                            points[i].active = 0.5;
+                            points[i].circle.active = 0.9;
+                        } else if (dist < 30000) {
+                            points[i].active = 0.2;
+                            points[i].circle.active = 0.5;
+                        } else {
+                            points[i].active = 0;
+                            points[i].circle.active = 0;
+                        }
+            
+                        drawLines(points[i]);
+                        points[i].circle.draw();
+                    }
+                    requestAnimationFrame(animate);
+                }
+            
+                function shiftPoint(p) {
+                    gsap.to(p, 2 + Math.random() * 3, {  // Increased movement range and speed
+                        x: p.originX - 60 + Math.random() * 120,  // Wider shifting range
+                        y: p.originY - 60 + Math.random() * 120,
+                        ease: "power2.inOut",
+                        onComplete: function() {
+                            shiftPoint(p);
+                        }
+                    });
+                }
+                function drawLines(p) {
+    if (!p.active) return;
+    
+    // Generate dynamic color using sine wave function based on time for blue and green family
+    const time = Date.now() * 0.002;  // Get current time in milliseconds, scaled down
+    const blue = Math.sin(time + p.x * 0.01) * 127 + 128;  // Sine wave for blue
+    const green = Math.sin(time + p.y * 0.01) * 127 + 128;  // Sine wave for green
+
+    // Set red to a low value, keeping it in the blue-green family
+    const red = 0;  // Keep red low to focus on blue-green range
+
+    const color = `rgb(${Math.floor(red)}, ${Math.floor(green)}, ${Math.floor(blue)})`;
+
+    ctx.beginPath();
+    for (var i in p.closest) {
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(p.closest[i].x, p.closest[i].y);
+    }
+    ctx.strokeStyle = color;  // Apply dynamic blue-green color
+    ctx.lineWidth = 1;
+    ctx.stroke();
+}
+
+
+            
+                function Circle(pos, rad, color) {
+                    this.pos = pos || null;
+                    this.radius = rad || null;
+                    this.color = color || null;
+            
+                    this.draw = function() {
+                        if (!this.active) return;
+                        ctx.beginPath();
+                        ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
+                        ctx.fillStyle = `rgba(0,0,0, ${this.active})`;
+                        ctx.fill();
+                    };
+                }
+            
+                function getDistance(p1, p2) {
+                    return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+                }
+            
+                function throttle(func, limit) {
+                    let inThrottle;
+                    return function() {
+                        if (!inThrottle) {
+                            func.apply(this, arguments);
+                            inThrottle = true;
+                            setTimeout(() => (inThrottle = false), limit);
+                        }
+                    };
+                }
+            
+            })();
+
+            const techElement = document.querySelector('.cont.TECH');
+if (techElement) {
+    techElement.addEventListener('click', function () {
+        window.location.href = 'events.html#TECH';
+    });
+}
+
+const nonTechElement = document.querySelector('.cont.NONTECH');
+if (nonTechElement) {
+    nonTechElement.addEventListener('click', function () {
+        window.location.href = 'events.html#NON-TECH';
+    });
+}
+
+const workElement = document.querySelector('.cont.WORK');
+if (workElement) {
+    workElement.addEventListener('click', function () {
+        window.location.href = 'events.html#WORKSHOP';
+    });
+}
+
+            </script>
+            
+            
+        <script src="scrollreveal.min.js"></script>
+        <script src="swiper-bundle.min.js"></script>
+        <script src="main.js"></script>
+
+
+
+         
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="card.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="card.js"></script>
+        
+        </body>
+    </html>

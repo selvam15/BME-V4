@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team-Members</title>
+    <link rel="shortcut icon" href="BIOMUTANTZ.png" type="image/png">
+    <link rel="stylesheet" href="slide.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <style>
+        :root {
+            --card-height: 300px;
+            --card-width: calc(var(--card-height) / 1.5);
+          }
+          * {
+            box-sizing: border-box;
+          }
+          body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #191c29;
+          }
+          .card {
+            width: var(--card-width);
+            height: var(--card-height);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 0 36px;
+            perspective: 2500px;
+            margin: 0 50px;
+          }
+          
+          .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          
+          .wrapper {
+            transition: all 0.5s;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+          }
+          
+          .card:hover .wrapper {
+            transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+            box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+          }
+          
+          .wrapper::before,
+          .wrapper::after {
+            content: "";
+            opacity: 0;
+            width: 100%;
+            height: 80px;
+            transition: all 0.5s;
+            position: absolute;
+            left: 0;
+          }
+          .wrapper::before {
+            top: 0;
+            height: 100%;
+            background-image: linear-gradient(
+              to top,
+              transparent 46%,
+              rgba(12, 13, 19, 0.5) 68%,
+              rgba(12, 13, 19) 97%
+            );
+          }
+          .wrapper::after {
+            bottom: 0;
+            opacity: 1;
+            background-image: linear-gradient(
+              to bottom,
+              transparent 46%,
+              rgba(12, 13, 19, 0.5) 68%,
+              rgba(12, 13, 19) 97%
+            );
+          }
+          
+          .card:hover .wrapper::before,
+          .wrapper::after {
+            opacity: 1;
+          }
+          
+          .card:hover .wrapper::after {
+            height: 120px;
+          }
+          .title {
+            width: 100%;
+            transition: transform 0.5s;
+          }
+          .card:hover .title {
+            transform: translate3d(0%, -50px, 100px);
+          }
+          
+          .character {
+            width: 100%;
+            opacity: 0;
+            transition: all 0.5s;
+            position: absolute;
+            z-index: -1;
+          }
+          
+          .card:hover .character {
+            opacity: 1;
+            transform: translate3d(0%, -30%, 100px);
+          }
+          
+    </style> 
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo" title="LOGO"><a href="#"><span>BIO</span>MUTANTZ</a></div>
+            <ul class="menu">
+                <li class="nav_list active" ><a href=".ALL"></a></li>
+                        <li class="nav_list"><a href=".TECH"></a></li>
+                        <li class="nav_list"><a href=".NON-TECH"></a></li>
+            </ul>
+            <a class="back" href="index.html">Back</a>
+            <div class="menu-btn" style="margin-right: 10px;">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <!--<div class="container"><br><br><br>
+        <div class="section-title">
+            <h1>Team</h1>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="team-10">
+                    <div class="team-img">
+                        <img src="hari.jpeg" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2>Josh Dunn</h2>
+                        <h3>CEO &amp; Founder</h3>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="team-overlay">
+                            <p>3rd Year</p>
+                            <div class="team-social">
+                                
+                                <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="team-10">
+                    <div class="team-img">
+                        <img src="hari.jpeg" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2>Mollie Ross</h2>
+                        <h3>Art Director</h3>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="team-overlay">
+                            <p>3rd Year</p>
+                            <div class="team-social">
+                                
+                                <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="team-10">
+                    <div class="team-img">
+                        <img src="hari.jpeg" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2>Dylan Adams</h2>
+                        <h3>Developer</h3>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="team-overlay">
+                            <p>3rd Year</p>
+                            <div class="team-social">
+                                
+                                <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="team-10">
+                    <div class="team-img">
+                        <img src="hari.jpeg" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2>Jennifer Page</h2>
+                        <h3>Designer</h3>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="team-overlay">
+                            <p>3rd Year</p>
+                            <div class="team-social">
+                                
+                                <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Jennifer Page</h2>
+                    <h3>Designer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Jennifer Page</h2>
+                    <h3>Designer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> 
+</div>
+
+<div class="container"><br><br><br>
+    <div class="section-title">
+        <h1>Team</h1>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Josh Dunn</h2>
+                    <h3>CEO &amp; Founder</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Mollie Ross</h2>
+                    <h3>Art Director</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Dylan Adams</h2>
+                    <h3>Developer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Jennifer Page</h2>
+                    <h3>Designer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Jennifer Page</h2>
+                    <h3>Designer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> 
+</div>
+
+<br><br><br>
+<div class="container"><br><br><br>
+    <div class="section-title">
+        <h1>Team</h1>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Josh Dunn</h2>
+                    <h3>CEO &amp; Founder</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <h3>Biomedical Engineer</h3>
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Mollie Ross</h2>
+                    <h3>Art Director</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <h3>Biomedical Engineer</h3>
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Dylan Adams</h2>
+                    <h3>Developer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <h3>Biomedical Engineer</h3>
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Jennifer Page</h2>
+                    <h3>Designer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <h3>Biomedical Engineer</h3>
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <h3>Biomedical Engineer</h3>
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <h3>Biomedical Engineer</h3>
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="column">
+    <div class="team-10">
+        <div class="team-img">
+            <img src="hari.jpeg" alt="Team Image">
+        </div>
+        <div class="team-content">
+            <h2>Jennifer Page</h2>
+            <h3>Designer</h3>
+            <div class="team-social">
+                
+                <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="team-overlay">
+                <h3>Biomedical Engineer</h3>
+                <p>3rd Year</p>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
+</div>
+
+<br><br><br>
+<div class="container"><br><br><br>
+    <div class="section-title">
+        <h1>Team</h1>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Josh Dunn</h2>
+                    <h3>CEO &amp; Founder</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <h3>Biomedical Engineer</h3>
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Mollie Ross</h2>
+                    <h3>Art Director</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Dylan Adams</h2>
+                    <h3>Developer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Jennifer Page</h2>
+                    <h3>Designer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Jennifer Page</h2>
+                    <h3>Designer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="column">
+    <div class="team-10">
+        <div class="team-img">
+            <img src="hari.jpeg" alt="Team Image">
+        </div>
+        <div class="team-content">
+            <h2>Jennifer Page</h2>
+            <h3>Designer</h3>
+            <div class="team-social">
+                
+                <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="team-overlay">
+                <p>3rd Year</p>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
+</div>
+
+<br><br><br>
+<div class="container"><br><br><br>
+    <div class="section-title">
+        <h1>Team</h1>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Josh Dunn</h2>
+                    <h3>CEO &amp; Founder</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Mollie Ross</h2>
+                    <h3>Art Director</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Dylan Adams</h2>
+                    <h3>Developer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Jennifer Page</h2>
+                    <h3>Designer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="column">
+    <div class="team-10">
+        <div class="team-img">
+            <img src="hari.jpeg" alt="Team Image">
+        </div>
+        <div class="team-content">
+            <h2>Jennifer Page</h2>
+            <h3>Designer</h3>
+            <div class="team-social">
+                
+                <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="team-overlay">
+                <p>3rd Year</p>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
+</div>
+
+<br><br><br>
+<div class="container"><br><br><br>
+    <div class="section-title">
+        <h1>Team</h1>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Josh Dunn</h2>
+                    <h3>CEO &amp; Founder</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Mollie Ross</h2>
+                    <h3>Art Director</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Dylan Adams</h2>
+                    <h3>Developer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="team-10">
+                <div class="team-img">
+                    <img src="hari.jpeg" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2>Jennifer Page</h2>
+                    <h3>Designer</h3>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="team-overlay">
+                        <p>3rd Year</p>
+                        <div class="team-social">
+                            
+                            <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                            <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="team-10">
+            <div class="team-img">
+                <img src="hari.jpeg" alt="Team Image">
+            </div>
+            <div class="team-content">
+                <h2>Jennifer Page</h2>
+                <h3>Designer</h3>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="team-overlay">
+                    <p>3rd Year</p>
+                    <div class="team-social">
+                        
+                        <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="column">
+    <div class="team-10">
+        <div class="team-img">
+            <img src="hari.jpeg" alt="Team Image">
+        </div>
+        <div class="team-content">
+            <h2>Jennifer Page</h2>
+            <h3>Designer</h3>
+            <div class="team-social">
+                
+                <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="team-overlay">
+                <p>3rd Year</p>
+                <div class="team-social">
+                    
+                    <a class="social-fb" href=""><i class='bx bxl-gmail'></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
+</div>-->
+<a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+    <div class="card">
+      <div class="wrapper">
+        <img src="sb.png" class="cover-image" />
+      </div>
+      <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" />
+      <img src="mag.png" class="character" />
+    </div>
+  </a>
+  
+  <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+    <div class="card">
+      <div class="wrapper">
+        <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" class="cover-image" />
+      </div>
+      <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" class="title" />
+      <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" class="character" />
+    </div>
+  </a>
+    <script src="slide.js"></script>
+</body>
+</html>

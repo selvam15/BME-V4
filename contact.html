@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Contact Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Exo:100');
+        body {
+            margin-top: 1.5rem;
+            color: #999;
+            font: 400 16px/1.5 "Exo", ubuntu, "segoe ui", helvetica, arial, sans-serif;
+            text-align: center;
+            /*background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC");*/
+            background-repeat: repeat;
+            background-position: 0 0;
+            background-color: black;
+            animation: bg-scrolling-reverse 0.92s infinite linear;
+            
+        }
+
+        @font-face {
+            font-family: "Geist";
+            src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+        }
+        
+          * {
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --size: 20px;
+        }
+        
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background: hsl(0 0% 6%);
+        }
+        
+        .el {
+            background: conic-gradient(from 180deg at 50% 70%,hsla(0,0%,98%,1) 0deg,#eec32d 72.0000010728836deg,#ec4b4b 144.0000021457672deg,#709ab9 216.00000858306885deg,#4dffbf 288.0000042915344deg,hsla(0,0%,98%,1) 1turn);
+            width: 100%;
+            height: 100%;
+            mask:
+            radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
+            url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+            mask-composite: intersect;
+            animation: flicker 20s infinite linear;
+          }
+
+          @keyframes flicker {
+            to {
+              mask-position: 50% 50%, 0 50%;
+            }
+          }
+
+        body::before {
+            content: "BIOMUTANTZ";
+            font-size: 6rem;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        @keyframes bg-scrolling-reverse {
+            100% { background-position: 50px 50px; }
+        }
+
+        /* Main styles */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0px;
+            margin-top: 30px;
+        }
+
+        .contact-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .contact-header div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .contact-header div i {
+            font-size: 40px;
+            color: rgb(20, 126, 108);
+            font-weight: bolder;
+        }
+
+        .contact-header div i:hover {
+            color: rgba(20, 126, 108, 0.703);
+        }
+
+        .contact-header div p {
+            margin: 5px 0;
+            font-size: 14px;
+            font-weight: bolder;
+        }
+
+        .contact-main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .form-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .form-section h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: rgb(20, 126, 108);
+        }
+
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-section input,
+        .form-section textarea {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-section button {
+            background-color: rgb(20, 126, 108);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-section button:hover {
+            background-color: #0ca4b8;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        p {
+            color: rgb(20, 126, 108);
+        }
+
+        @media (max-width: 768px) {
+            .contact-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-main {
+                flex-direction: column;
+            }
+
+            .form-section,
+            .image-section {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .contact-header div i {
+                font-size: 40px;
+                display: none;
+            }
+
+            body::before {
+                content: "BIOMUTANTZ";
+                font-size: 2rem;
+                font-weight: 100;
+                font-style: normal;
+            }
+
+            .form-section h2 {
+                font-size: 18px;
+            }
+
+            .form-section input,
+            .form-section textarea {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .form-section button {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .contact-header div p {
+                font-size: 12px;
+                display: none;
+            }
+
+            .image-section img {
+                width: 85%;
+                border-radius: 10px;
+                margin-left: 25px;
+            }
+
+            .form-section {
+                padding: 40px;
+                background: #f9f9f9;
+                min-width: 200px;
+                margin-top: -30px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-header">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><b>Address:</b> Sarathy Nagar, Kundrathur, chennai</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>Phone: <a href="teL:9486382149" style="text-decoration: none; color:rgb(20, 126, 108)">9486382149</a>,   <a href="teL:7010251985" style="text-decoration: none; color:rgb(20, 126, 108)">7010251985</a></p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p>Email: biomutantz@citchennai.net</p>
+            </div>
+            <div>
+                <i class="fa fa-globe"></i>
+                <p>Website: biomutantz.com</p>
+            </div>
+        </div>
+
+        <div class="contact-main">
+            <div class="form-section">
+                <h2>Contact Us</h2>
+                <form action="https://formspree.io/f/xwpvojkz" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="5" placeholder="Message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="image-section">
+                <img src="BIOMUTANTZ.png" alt="BIO">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.image-section').addEventListener('mousemove', function (e) {
+            const img = this.querySelector('img');
+            const { left, top, width, height } = this.getBoundingClientRect();
+            const x = (e.clientX - left) / width - 0.8;
+            const y = (e.clientY - top) / height - 0.8;
+
+            img.style.transform = `rotateX(${y * 70}deg) rotateY(${x * 80}deg)`;
+        });
+
+        document.querySelector('.image-section').addEventListener('mouseleave', function () {
+            const img = this.querySelector('img');
+            img.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+    </script>
+</body>
+</html>
+
